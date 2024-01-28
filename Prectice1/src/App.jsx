@@ -1,20 +1,27 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import AppName from "./Component/AppName";
 import AddTodo from "./Component/AddTodo";
-import TodoItem1 from "./Component/TodoItem1";
-import TodoItem2 from "./Component/TodoItem2";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Todoitems from "./Component/Todoitems";
 function App() {
+  const todoitems =[
+    {
+    name:'Buy Milk',
+    dueDate:'4/10/2023',
+  },
+{
+  name:'Go to collage',
+  dueDate:'4/10/2023',
+},
+
+];
   return (
     <>
       <center className="todo-contain">
         <AppName />
         <AddTodo />
-        <TodoItem1 />
-        <TodoItem2 />
+        <Todoitems key={todoitems} todoitems={todoitems}/>
+                   
       </center>
     </>
   );
